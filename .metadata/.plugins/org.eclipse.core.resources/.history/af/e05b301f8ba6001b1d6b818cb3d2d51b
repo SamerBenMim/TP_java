@@ -1,0 +1,10 @@
+package server;
+
+public class run {
+    
+public static void main() {
+    System.out.println ("hello");
+    
+}
+
+}

@@ -1,0 +1,19 @@
+package server;
+
+public class ain {
+
+	public static void main(String[] args) {
+	/*MYrunnable r =new MYrunnable();
+	Thread t = new Thread(r);
+		t.start();		*/
+		
+		Runnable MYrunnable = ()-> {
+			System.out.println("hi");		
+		};
+		Thread t = new Thread(  ()-> {
+			System.out.println("hi");		
+		} );
+		t.start();	
+	}
+} 
+

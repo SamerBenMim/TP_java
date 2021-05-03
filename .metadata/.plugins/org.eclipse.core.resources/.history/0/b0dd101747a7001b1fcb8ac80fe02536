@@ -1,0 +1,61 @@
+package server;
+
+
+import java.net.*;
+
+import java.io.*;
+
+public class ClientMultiple {
+    
+    public static void main(String args[]) throws IOException{
+        int compteur=0;
+        try (Socket socket = new Socket(args[0], Integer.valueOf(args[1]))){
+ 
+            OutputStream output = socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true);
+ 
+            
+                String text;
+                InputStream input = socket.getInputStream();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+                String time = reader.readLine();
+                
+                System.out.println(time);
+                while(compteur<10){
+                    compteur++;
+                    text = "Je suis le client "+InetAddress.getLocalHost()+" et j'ai fait "+compteur+" appels" ;
+                    
+                    writer.println(text);
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    input = socket.getInputStream();
+                    reader = new BufferedReader(new InputStreamReader(input));
+    
+                    time = reader.readLine();
+                    
+                    System.out.println(time);
+                    
+                    
+                }
+                text = "" ;
+                writer.println(text);
+                writer.close();
+                input.close();
+                reader.close();
+                socket.close();
+                
+            
+        }catch (UnknownHostException ex) {
+ 
+            System.out.println("Server not found: " + ex.getMessage());
+ 
+        } catch (IOException ex) {
+ 
+            System.out.println("I/O error: " + ex.getMessage());
+        }
+    }
+}

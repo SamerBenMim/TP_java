@@ -1,0 +1,13 @@
+package server;
+
+
+public abstract class abstcircle extends shape implements drawable {
+
+	
+	public void say() ;
+	
+
+	
+	
+	
+}

@@ -1,0 +1,60 @@
+package server;
+
+public class ain {
+
+	public abstract class shape{
+		public abstract void draw();
+	}
+	
+	public class circle extends shape {
+
+		@Override
+		public void draw() {
+System.out.println ("hellooo");
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		/*shape sh = new shape() {
+			
+				public void draw() {
+					System.out.println("hello");
+				}
+			};
+			sh.draw();
+			
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	/*MYrunnable r =new MYrunnable();
+	Thread t = new Thread(r);
+		t.start();		*/
+		
+		/*Runnable MYrunnable = ()-> {
+			System.out.println("hi");		
+		};
+		Thread t = new Thread(  ()-> {
+			System.out.println("hi");		
+		} );
+		t.start();	*/
+		
+		
+	}
+	}
+
+

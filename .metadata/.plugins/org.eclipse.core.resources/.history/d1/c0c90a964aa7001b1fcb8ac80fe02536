@@ -1,0 +1,10 @@
+package server;
+
+public class ain {
+
+	public static void main(String[] args) {
+		int p =20 ;
+		Consulatant x = new Consulatant();
+		x.raisesalary( p->p*p ) ;		}
+
+}

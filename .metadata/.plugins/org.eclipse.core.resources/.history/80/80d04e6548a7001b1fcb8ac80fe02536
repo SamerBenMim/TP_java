@@ -1,0 +1,10 @@
+package server;
+
+public class Consulatant implements payable {
+
+	public double salary;
+	public double raisesalary(double pourcentage) {
+		return salary + salary *pourcentage;
+	}
+
+}

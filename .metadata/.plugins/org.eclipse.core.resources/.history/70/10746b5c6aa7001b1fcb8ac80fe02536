@@ -1,0 +1,12 @@
+package server;
+
+
+public class circle extends shape {
+
+	
+	public void say() {
+System.out.println ("hellooo");
+	}
+	
+	
+}

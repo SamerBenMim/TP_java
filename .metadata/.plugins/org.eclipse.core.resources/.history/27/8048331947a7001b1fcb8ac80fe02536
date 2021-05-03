@@ -1,0 +1,22 @@
+package server;
+
+import java.io.IOException;
+
+import java.net.*;
+public class MultipleServer {
+   
+    public static void main(String[] args) {
+        try {
+            int port = 5432;
+            ServerSocket listenSocket= new ServerSocket(port);
+            while(true){
+                Socket clientSocket = listenSocket.accept();
+                Connexion C = new Connexion(clientSocket);
+            }
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+
+}

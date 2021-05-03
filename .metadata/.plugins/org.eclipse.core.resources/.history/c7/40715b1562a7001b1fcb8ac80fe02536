@@ -1,0 +1,49 @@
+package server;
+
+public class ain {
+
+	interface shape{
+		public void draw();
+	}
+	public static void main(String[] args) {
+		
+		
+		shape sh = new shape() {
+			{
+				public void draw() {
+					Syste.out.println("hello");
+				}
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	/*MYrunnable r =new MYrunnable();
+	Thread t = new Thread(r);
+		t.start();		*/
+		
+		/*Runnable MYrunnable = ()-> {
+			System.out.println("hi");		
+		};
+		Thread t = new Thread(  ()-> {
+			System.out.println("hi");		
+		} );
+		t.start();	*/
+		
+		
+		
+	}
+} 
+

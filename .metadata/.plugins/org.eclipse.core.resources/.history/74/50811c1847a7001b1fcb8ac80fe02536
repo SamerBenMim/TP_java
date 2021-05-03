@@ -1,0 +1,66 @@
+package server;
+
+import java.io.BufferedReader;
+
+import java.net.*;
+import java.io.*;
+class Connexion extends Thread {
+    BufferedReader in;
+    Socket sock;
+    PrintWriter writer;
+    static int reqcount = 0;
+    public Connexion (Socket clientSocket){
+        
+        try {
+            sock = clientSocket;
+            in = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+            writer = new PrintWriter(sock.getOutputStream(),true);
+            this.start();
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+
+        }
+       
+    }
+    private String message_suivant()
+      {
+        reqcount++;                 
+         switch(reqcount%5){
+             case 0: return new String("Marrakech est une ville magnifique.");
+             case 1: return new String("La medina de Fes est splendide au couchant.");
+             case 2: return new String("Les montagnes de l'Atlas sont impressionnantes.");
+             case 3: return new String("La place Jamaa alfna est au centre de la ville.");
+             case 4: return new String("Les cotes du Maroc valent le coup d'oeil.");
+         }
+         return new String("ca n'arrive jamais");
+     }
+    public void run(){
+        try {
+            writer.println("Welcome User");
+            String s;
+            do{
+                s = in.readLine();
+                System.out.println(s);
+                sleep(1000);
+                writer.println(message_suivant());
+                
+            }while(s!="");
+            System.out.println("One User Left");
+        }catch(EOFException e){
+            e.printStackTrace();
+            
+        }catch(IOException e){
+        
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                sock.close();
+                writer.close();
+                in.close();
+            }catch(IOException e){
+
+            }
+        }
+    }
+}

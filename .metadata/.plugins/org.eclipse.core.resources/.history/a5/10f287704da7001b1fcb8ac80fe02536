@@ -1,0 +1,12 @@
+package server;
+
+public class ain {
+
+	public static int main(String[] args) {
+		int p =20 ;
+		Consulatant x = new Consulatant();
+		x.raisesalary( function(){return 2 ;}  ) ;
+		
+	}
+
+}

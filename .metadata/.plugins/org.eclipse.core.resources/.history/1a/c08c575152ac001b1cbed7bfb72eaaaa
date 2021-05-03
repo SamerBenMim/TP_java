@@ -1,0 +1,5 @@
+package com.acme.utils;
+
+public class NotValidDate extends Exception {
+
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="com.acme.domain.Good.UnitOfMeasureType"/>
+    <fullyQualifiedTypeName name="com.acme.domain.Solid"/>
+    <fullyQualifiedTypeName name="com.acme.domain.Liquid"/>
+    <fullyQualifiedTypeName name="com.acme.domain.Good"/>
+    <fullyQualifiedTypeName name="com.acme.utils.MyDate"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+</qualifiedTypeNameHistroy>

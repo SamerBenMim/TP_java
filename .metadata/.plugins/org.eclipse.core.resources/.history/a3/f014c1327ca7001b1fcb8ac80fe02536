@@ -1,0 +1,65 @@
+package server;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+
+public class ain {
+
+	
+	
+
+	public static void main(String[] args) {
+	ArrayList l = new ArrayList();
+	l.add(1);
+	l.add(2);
+	l.add("aaaa");
+
+	l.size();
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*shape sh = new shape() {
+			
+				public void draw() {
+					System.out.println("hello");
+				}
+			};
+			sh.draw();
+			
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	/*MYrunnable r =new MYrunnable();
+	Thread t = new Thread(r);
+		t.start();		*/
+		
+		/*Runnable MYrunnable = ()-> {
+			System.out.println("hi");		
+		};
+		Thread t = new Thread(  ()-> {
+			System.out.println("hi");		
+		} );
+		t.start();	*/
+		
+		
+	}
+	
+
+

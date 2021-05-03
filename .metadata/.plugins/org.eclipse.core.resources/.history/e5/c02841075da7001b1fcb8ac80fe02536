@@ -1,0 +1,12 @@
+package server;
+
+public class ain {
+
+	public static void main(String[] args) {
+	MYrunnable r =new MYrunnable();
+		Thread t = new Thread(r);
+				t.start();
+	}
+
+} 
+
